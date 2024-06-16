@@ -1,0 +1,513 @@
+@import url(./reset.css);
+@import url(./efectoBoton.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Protest+Strike&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+:root {
+  --fuente1: "Lobster", sans-serif;
+  --fuente2: "Protest Strike", sans-serif;
+}
+
+/*********************/
+/* ESTILOS PARA BODY */
+/*********************/
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../imagenes/nietoAbueloPlaya.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  background-position: center;
+  overflow: hidden;
+}
+
+/******************************/
+/* ESTILOS PARA EL PANEL INFO */
+/******************************/
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: top 0.8s ease-in-out;
+  width: 50vw;
+  padding: 40px;
+  border-radius: 50px;
+  top: 0;
+}
+
+.info p {
+  text-align: center;
+  line-height: 1.5em;
+  font-family: var(--fuente1);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+}
+
+/**************************************************/
+/* ESTILOS PARA LOS BOTONES DE PASAR O RETROCEDER */
+/**************************************************/
+.botones {
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  display: none;
+}
+
+.botones i {
+  font-size: 40px;
+  cursor: pointer;
+  color: rgb(161, 188, 212);
+  filter: drop-shadow(0 0 5px rgba(110, 146, 158, 0.4)); /*Sombra al icono */
+  transition: transform 0.5s ease-in-out;
+}
+
+.botones i:hover {
+  transform: scale(1.2);
+}
+
+/********************************************************/
+/* ESTILOS PARA EL SECTION DONDE SE ALOJAN LOS 3 COMICS */
+/********************************************************/
+.comics {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -1000px;
+  transition: top 0.8s ease-in-out;
+}
+
+/*************************************/
+/* ESTILOS COMUNES PARA LOS 3 COMICS */
+/*************************************/
+.comic1,
+.comic2,
+.comic3 {
+  width: 98%;
+  height: 82%;
+  justify-content: center;
+  display: grid;
+  row-gap: 2%;
+  column-gap: 1%;
+}
+
+/****************************************/
+/* ESTILOS PARA LOS DIV DE LOS 3 COMICS */
+/****************************************/
+.comic1 div,
+.comic2 div,
+.comic3 div {
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-position: center;
+  border: 1px dotted rgb(81, 77, 77);
+  border-radius: 10px;
+  box-shadow: 6px 7px 10px -3px rgba(123, 107, 107, 0.75);
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+
+/**************************/
+/* ESTILOS PARA EL COMIC 1*/
+/**************************/
+.comic1 {
+  grid-template-columns: 12.5% 150px 5% 12.5% 7% 20%;
+  grid-template-rows: 12.5% 12.5% 25%;
+}
+
+/**************************/
+/* ESTILOS PARA EL COMIC 2*/
+/**************************/
+.comic2 {
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: 25% 15% 15% 25%;
+}
+
+/**************************/
+/* ESTILOS PARA EL COMIC 3*/
+/**************************/
+.comic3 {
+  grid-template-columns: 16% 16% 16% 23%;
+  grid-template-rows: 30% 25% 15% 10% 20%;
+}
+
+/**************************/
+/* POSICIONAMIENTO COMIC 1*/
+/**************************/
+.v1 {
+  grid-column: 1 / 3;
+  grid-row: 1/4;
+  background-image: url(../imagenes/viñetas/Historia1/Imagen1.png);
+}
+
+.v2 {
+  grid-column: 3/6;
+  grid-row: 1/4;
+  background-image: url(../imagenes/viñetas/Historia1/Imagen2.png);
+}
+
+.v3 {
+  grid-column: 6/7;
+  grid-row: 1/4;
+  background-image: url(../imagenes/viñetas/Historia1/Imagen3.png);
+}
+
+.v4 {
+  grid-column: 1/4;
+  grid-row: 4/8;
+  background-image: url(../imagenes/viñetas/Historia1/Imagen4.png);
+}
+
+.v5 {
+  grid-column: 4/6;
+  grid-row: 4/8;
+  background-image: url(../imagenes/viñetas/Historia1/Imagen5.png);
+}
+
+.v6 {
+  grid-column: 6/7;
+  grid-row: 4/8;
+  background-image: url(../imagenes/viñetas/Historia1/images.jpg);
+}
+
+/**************************/
+/* POSICIONAMIENTO COMIC 2*/
+/**************************/
+.v1-1 {
+  grid-column: 2 / 4;
+  grid-row: 1/2;
+  background-image: url(../imagenes/viñetas/Historia2/Imagen1.png);
+}
+
+.v2-1 {
+  grid-column: 1/2;
+  grid-row: 2/5;
+  background-image: url(../imagenes/viñetas/Historia2/Imagen2.png);
+}
+
+.v3-1 {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  background-image: url(../imagenes/viñetas/Historia2/Imagen3.png);
+}
+
+.v4-1 {
+  grid-column: 3/4;
+  grid-row: 2/4;
+  background-image: url(../imagenes/viñetas/Historia2/Imagen4.png);
+}
+
+.v5-1 {
+  grid-column: 4/5;
+  grid-row: 2/5;
+  background-image: url(../imagenes/viñetas/Historia2/Imagen5.png);
+}
+
+.v6-1 {
+  grid-column: 2/4;
+  grid-row: 4/5;
+  background-image: url(../imagenes/viñetas/Historia2/Imagen6.png);
+}
+
+/**************************/
+/* POSICIONAMIENTO COMIC 3*/
+/**************************/
+.v1-2 {
+  grid-column: 1 / 2;
+  grid-row: 1/2;
+  background-image: url(../imagenes/viñetas/Historia3/Imagen1.png);
+}
+
+.v2-2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-image: url(../imagenes/viñetas/Historia3/Imagen2.png);
+}
+
+.v3-2 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-image: url(../imagenes/viñetas/Historia3/Imagen3.png);
+}
+
+.v4-2 {
+  grid-column: 4/6;
+  grid-row: 1/2;
+  background-image: url(../imagenes/viñetas/Historia3/Imagen4.png);
+}
+
+.v5-2 {
+  grid-column: 1/4;
+  grid-row: 2/4;
+  background-image: url(../imagenes/viñetas/Historia3/Imagen5.png);
+}
+
+.v6-2 {
+  grid-column: 4/5;
+  grid-row: 2/4;
+  background-image: url(../imagenes/viñetas/Historia3/Imagen6.png);
+}
+
+.v7-2 {
+  grid-column: 1/2;
+  grid-row: 4/6;
+  background-image: url(../imagenes/viñetas/Historia3/Imagen8.png);
+}
+
+.v8-2 {
+  grid-column: 2/3;
+  grid-row: 4/6;
+  background-image: url(../imagenes/viñetas/Historia3/Imagen9.png);
+}
+
+.v9-2 {
+  grid-column: 3/6;
+  grid-row: 4/6;
+  background-image: url(../imagenes/viñetas/Historia3/fin.png);
+}
+
+/*********************/
+/* MEDIA QUERY COMICS*/
+/*********************/
+@media (max-width: 800px) {
+  /*****************************/
+  /* ESTILOS PARA EL PANEL INFO*/
+  /*****************************/
+  .info {
+    width: auto;
+    height: 100vh;
+    align-items: center;
+  }
+
+  /**************************/
+  /* ESTILOS PARA EL COMIC 1*/
+  /**************************/
+  .comic1 {
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 30% 20% 20% 25%;
+  }
+
+  /**************************/
+  /* ESTILOS PARA EL COMIC 2*/
+  /**************************/
+  .comic2 {
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 30% 20% 20% 20%;
+  }
+
+  /**************************/
+  /* ESTILOS PARA EL COMIC 3*/
+  /**************************/
+  .comic3 {
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 30% 15% 5% 15% 10% 20%;
+  }
+
+  /**************************/
+  /* POSICIONAMIENTO COMIC 1*/
+  /**************************/
+  .v1 {
+    grid-column: 1 / 2;
+    grid-row: 1/3;
+  }
+
+  .v2 {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
+  .v3 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+
+  .v4 {
+    grid-column: 1/3;
+    grid-row: 3/5;
+  }
+
+  .v5 {
+    grid-column: 3/4;
+    grid-row: 3/5;
+  }
+
+  .v6 {
+    display: none;
+  }
+
+  /**************************/
+  /* POSICIONAMIENTO COMIC 2*/
+  /**************************/
+  .v1-1 {
+    grid-column: 1 / 4;
+    grid-row: 1/2;
+  }
+
+  .v2-1 {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .v3-1 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  .v4-1 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  .v5-1 {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+
+  .v6-1 {
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+
+  /**************************/
+  /* POSICIONAMIENTO COMIC 3*/
+  /**************************/
+  .v1-2 {
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+  }
+
+  .v2-2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .v3-2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .v4-2 {
+    grid-column: 1/4;
+    grid-row: 2/4;
+  }
+
+  .v5-2 {
+    grid-column: 1/3;
+    grid-row: 4/6;
+  }
+
+  .v6-2 {
+    grid-column: 3/4;
+    grid-row: 4/6;
+  }
+
+  .v7-2 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  .v8-2 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+
+  .v9-2 {
+    grid-column: 3/5;
+    grid-row: 6/7;
+  }
+}
+
+/*********************/
+/* MEDIA QUERY COMICS*/
+/*********************/
+@media (max-width: 500px) {
+  /**************************/
+  /* POSICIONAMIENTO COMIC 1*/
+  /**************************/
+  .v1 {
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+  }
+
+  .v2 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+
+  .v3 {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .v4 {
+    grid-column: 2/5;
+    grid-row: 2/4;
+  }
+
+  .v5 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .v6 {
+    grid-column: 2/4;
+    grid-row: 4/5;
+    display: block;
+  }
+
+  /**************************/
+  /* POSICIONAMIENTO COMIC 3*/
+  /**************************/
+  .v1-2 {
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+  }
+
+  .v2-2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .v3-2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .v4-2 {
+    grid-column: 1/4;
+    grid-row: 2/4;
+  }
+
+  .v5-2 {
+    grid-column: 1/3;
+    grid-row: 4/6;
+  }
+
+  .v6-2 {
+    grid-column: 3/4;
+    grid-row: 4/6;
+  }
+
+  .v7-2 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  .v8-2 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+
+  .v9-2 {
+    grid-column: 3/4;
+    grid-row: 6/7;
+  }
+}
